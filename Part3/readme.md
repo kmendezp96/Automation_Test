@@ -1,4 +1,4 @@
-#Part 3: Reflection on the automation exercise
+# Part 3: Reflection on the automation exercise
 
 *	It is a System test as the test are focus on the functionality of the whole system 
 rather than specific parts of it or the interactions between those parts. 
@@ -19,7 +19,7 @@ without knowing which parts of the system interact during this flow.
     * Acceptance Testing:  Acceptance test aims to check if the system is ready to work in an operational environment with real users that should be in the capacity of fulfil their requirements with the system.
         * Pros: In this testing types we usually cover other non-functional aspects of the system, like security, performance, usability, etc. As we also test functionalities of the system, so we are covering different aspects and parts of the system with the same test.
         * Cons: this test are more focused to ensure the correctness of the system rather than finding defects as those defects should had been found in previous layers, test are harder to implement and execute as it could involve different tools, licenses or require to be executed by different stakeholders like system administrators, final users, or legal auditors.
-##Conclusion: 
+## Conclusion: 
 Test in one single scope are not enough no matter which scope is chosen, 
 a good testing coverage includes tests in those different scopes, 
 trying to reduce the number of test on the higher layers 
