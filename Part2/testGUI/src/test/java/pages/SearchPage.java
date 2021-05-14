@@ -64,7 +64,7 @@ public class SearchPage extends BasePage {
         return this.webDriver.findElements(productPriceSelector)
                 .stream()
                 .map( e -> Double.parseDouble(e.getText()
-                        .replaceAll("[^0-9,]","")
+                        .replaceAll("[^0-9,.]","")
                         .replace(",",".")))
                 .collect(Collectors.toList());
     }
@@ -115,7 +115,7 @@ public class SearchPage extends BasePage {
         }
         Product product = new Product(getPageProductTitles().get(randomIndex),
                 Double.parseDouble(
-                        price.replaceAll("[^0-9,]","")
+                        price.replaceAll("[^0-9,.]","")
                                 .replace(",",".")));
         this.webDriver.waitForAction(() ->
                 this.webDriver.findElements(productAddButtonSelector).get(randomIndex).click());

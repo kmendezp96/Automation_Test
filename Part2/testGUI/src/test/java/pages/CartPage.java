@@ -39,7 +39,7 @@ public class CartPage extends BasePage {
             price = this.webDriver.findElement(productPriceSelector).getText();
         }
         return Double.parseDouble(
-                price.replaceAll("[^0-9,]","")
+                price.replaceAll("[^0-9,.]","")
                         .replace(",","."));
     }
 
@@ -58,7 +58,7 @@ public class CartPage extends BasePage {
         return Double.parseDouble(
                 this.webDriver.findElement(orderSummaryShippingPriceSelector)
                         .getText()
-                        .replaceAll("[^0-9,]","")
+                        .replaceAll("[^0-9,.]","")
                         .replace(",","."));
     }
 
@@ -68,7 +68,7 @@ public class CartPage extends BasePage {
         return Double.parseDouble(
                 this.webDriver.findElement(orderSummaryTotalPriceSelector)
                         .getText()
-                        .replaceAll("[^0-9,]","")
+                        .replaceAll("[^0-9,.]","")
                         .replace(",","."));
     }
 
